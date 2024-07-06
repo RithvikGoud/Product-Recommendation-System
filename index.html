@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Card</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cd.css') }}">
+</head>
+<body>
+   <nav>
+        
+      <ul>
+          <li><a href="#">SHOPZONE</a></li>
+          <li><a href="#">SHOP NOW</a></li>
+          <li><a href="#">YOUR FAVORITES</a></li>
+          <li><a href="#">TOP TRENDS</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">LOGIN</a></li>
+          
+      </ul>
+  </nav>
+  
+  <h1 class="text-white">Products Recommendation System</h1>
+
+  <form action="/recommend_products" method="post">
+    <div class="form-row">
+        <select name="user_input" class="form-control">
+            <option value="" selected disabled>Select a product...</option>
+            <option value="Avery 49">Avery 49</option>
+            <option value="SANFORD Liquid Accent™ Tank-Style Highlighters">SANFORD Liquid Accent™ Tank-Style Highlighters</option>
+            <option value="Xerox 1968">Xerox 1968</option>
+            <option value="Acme® Preferred Stainless Steel Scissors">Acme® Preferred Stainless Steel Scissors</option>
+            <option value="V70">V70</option>
+            <option value="Xerox 194">Xerox 194</option>
+            <option value="Canon S750 Color Inkjet Printer">Canon S750 Color Inkjet Printer</option>
+            <option value="Global Troy™ Executive Leather Low-Back Tilter">Global Troy™ Executive Leather Low-Back Tilter</option>
+            <option value="Xerox 1930">Xerox 1930</option>
+            <option value="Kensington 6 Outlet MasterPiece® HOMEOFFICE Power Control Center">Kensington 6 Outlet MasterPiece® HOMEOFFICE Power Control Center</option>
+            <option value="Xerox 21">Xerox 21</option>
+            <option value="*Staples* Highlighting Markers">*Staples* Highlighting Markers</option>
+            <option value="Accessory34">Accessory34</option>
+            <option value="Xerox 1933">Xerox 1933</option>
+            <option value="Sauder Forest Hills Library, Woodland Oak Finish">Sauder Forest Hills Library, Woodland Oak Finish</option>
+            <option value="Riverside Furniture Stanwyck Manor Table Series">Riverside Furniture Stanwyck Manor Table Series</option>
+            <option value="Park Ridge™ Embossed Executive Business Envelopes">Park Ridge™ Embossed Executive Business Envelopes</option>
+            <option value="DAX Two-Tone Rosewood/Black Document Frame, Desktop, 5 x 7">DAX Two-Tone Rosewood/Black Document Frame, Desktop, 5 x 7</option>
+            <option value="Fiskars® Softgrip Scissors">Fiskars® Softgrip Scissors</option>
+            <option value="Howard Miller 12-3/4 Diameter Accuwave DS ™ Wall Clock">Howard Miller 12-3/4 Diameter Accuwave DS ™ Wall Clock</option>
+            <option value="Newell 321">Newell 321</option>
+            <option value="Newell 351">Newell 351</option>
+            <option value="OIC Colored Binder Clips, Assorted Sizes">OIC Colored Binder Clips, Assorted Sizes</option>
+            <option value="Xerox 213">Xerox 213</option>
+            <option value="Grip Seal Envelopes">Grip Seal Envelopes</option>
+            <option value="Tyvek ® Top-Opening Peel & Seel ® Envelopes, Gray">Tyvek ® Top-Opening Peel & Seel ® Envelopes, Gray</option>
+            <option value="Newell 310">Newell 310</option>
+            <option value="Xerox 1992">Xerox 1992</option>
+            <option value="Master Giant Foot® Doorstop, Safety Yellow">Master Giant Foot® Doorstop, Safety Yellow</option>
+            <option value="Avery 05222 Permanent Self-Adhesive File Folder Labels for Typewriters, on Rolls, White, 250/Roll">Avery 05222 Permanent Self-Adhesive File Folder Labels for Typewriters, on Rolls, White, 250/Roll</option>
+            <option value="Staples Gold Paper Clips">Staples Gold Paper Clips</option>
+            <option value="StarTAC 7797">StarTAC 7797</option>
+            <option value="GBC Laser Imprintable Binding System Covers, Desert Sand">GBC Laser Imprintable Binding System Covers, Desert Sand</option>
+            <option value="Dixon My First Ticonderoga Pencil, #2">Dixon My First Ticonderoga Pencil, #2</option>
+            <option value="Hoover Commercial Soft Guard Upright Vacuum And Disposable Filtration Bags">Hoover Commercial Soft Guard Upright Vacuum And Disposable Filtration Bags</option>
+            <option value="DAX Natural Wood-Tone Poster Frame">DAX Natural Wood-Tone Poster Frame</option>
+            <option value="Belkin F9M820V08 8 Outlet Surge">Belkin F9M820V08 8 Outlet Surge</option>
+            <option value="Fellowes Twister Kit, Gray/Clear, 3/pkg">Fellowes Twister Kit, Gray/Clear, 3/pkg</option>
+            <option value="Advantus Plastic Paper Clips">Advantus Plastic Paper Clips</option>
+            <option value="Office Star Flex Back Scooter Chair with White Frame">Office Star Flex Back Scooter Chair with White Frame</option>
+            <option value="Avery 485">Avery 485</option>
+            <option value="Hewlett Packard 6S Scientific Calculator">Hewlett Packard 6S Scientific Calculator</option>
+            <option value="Space Solutions Commercial Steel Shelving">Space Solutions Commercial Steel Shelving</option>
+            <option value="Anderson Hickey Conga Table Tops & Accessories">Anderson Hickey Conga Table Tops & Accessories</option>
+            <option value="Xerox 197">Xerox 197</option>
+            <option value="Nu-Dell Leatherette Frames">Nu-Dell Leatherette Frames</option>
+            <option value="Xerox 1979">Xerox 1979</option>
+            <option value="Xerox 1929">Xerox 1929</option>
+            <option value="BPI Conference Tables">BPI Conference Tables</option>
+            <option value="Newell 323">Newell 323</option>
+            <option value="Boston 1730 StandUp Electric Pencil Sharpener">Boston 1730 StandUp Electric Pencil Sharpener</option>
+            <option value="Harmony HEPA Quiet Air Purifiers">Harmony HEPA Quiet Air Purifiers</option>
+            <option value="3M Office Air Cleaner">3M Office Air Cleaner</option>
+            <option value="Dual Level, Single-Width Filing Carts">Dual Level, Single-Width Filing Carts</option>
+            <option value="Belkin 8 Outlet SurgeMaster II Gold Surge Protector">Belkin 8 Outlet SurgeMaster II Gold Surge Protector</option>
+            <option value="Avery 498">Avery 498</option>
+            <option value="Avery 52">Avery 52</option>
+            <option value="V 3600 Series">V 3600 Series</option>
+            <option value="Eldon Image Series Black Desk Accessories">Eldon Image Series Black Desk Accessories</option>
+            <option value="Xerox 1880">Xerox 1880</option>
+            <option value="Coloredge Poster Frame">Coloredge Poster Frame</option>
+            <option value="SC-3160">SC-3160</option>
+            <option value="Newell 346">Newell 346</option>
+            <option value="Holmes Harmony HEPA Air Purifier for 17 x 20 Room">Holmes Harmony HEPA Air Purifier for 17 x 20 Room</option>
+            <option value="StarTAC Series">StarTAC Series</option>
+            <option value="Avery 481">Avery 481</option>
+            <option value="Xerox 1966">Xerox 1966</option>
+            <option value="Hunt Boston® Vacuum Mount KS Pencil Sharpener">Hunt Boston® Vacuum Mount KS Pencil Sharpener</option>
+            <option value="Canon P1-DHIII Palm Printing Calculator">Canon P1-DHIII Palm Printing Calculator</option>
+            <option value="StarTAC 3000">StarTAC 3000</option>
+            <option value="TimeportP7382">TimeportP7382</option>
+            <option value="Canon PC940 Copier">Canon PC940 Copier</option>
+            <option value="Storex DuraTech Recycled Plastic Frosted Binders">Storex DuraTech Recycled Plastic Frosted Binders</option>
+            <option value="Newell 338">Newell 338</option>
+        </select>
+        <input type="submit" class="myButton" value="Search">
+    </div>
+</form>
+
+  <div class="wrapper">
+    {% for i in range(Category|length) %}
+    <div class="single-card">
+      <div class="img-area">
+        <img src="{{ link[i] }}" alt="image">
+        <div class="overlay">
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="view-details">View Details</button>
+        </div>
+      </div>
+      
+      <div class="info">
+        <h3>{{ Sub_Category[i] }}</h3>
+        <p class="price">{{ Product_Discount[i] }} OFF BUY NOW</p>
+        <p>{{ Product_Name[i] }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="wrapper">
+   {% if data %}
+   {% for i in data %}
+   <div class="single-card">
+     <div class="img-area">
+       <img src="{{i[1]}}" alt="image">
+       <div class="overlay">
+         <button class="add-to-cart">Add to Cart</button>
+         <button class="view-details">View Details</button>
+       </div>
+     </div>
+     
+     <div class="info">
+       <h3>{{i[2]}}</h3>
+       
+       <p>{{i[0]}}</p>
+     </div>
+   </div>
+   {% endfor %}
+   {% endif %}
+ </div>
+    
+</body>
+</html>
